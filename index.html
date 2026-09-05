@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan Fakih & Dwi</title>
+    <!-- Google Fonts untuk font bergaya tulisan tangan elegan & serif -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: #f4f6f4;
+            color: #2c3e50;
+            text-align: center;
+        }
+        /* Overlay Cover */
+        #cover {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 48, 22, 0.9), rgba(18, 48, 22, 0.95)), 
+                        url('https://unsplash.com') center/cover;
+            color: #f5eedc;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: transform 0.8s ease-in-out;
+            padding: 20px;
+        }
+        .cover-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.5rem;
+            color: #d4af37;
+            margin-bottom: 20px;
+        }
+        /* Konten Utama */
+        .wrapper {
+            max-width: 500px;
+            margin: 0 auto;
+            background: #ffffff;
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            padding: 40px 20px;
+            border-left: 4px solid #1e4620;
+            border-right: 4px solid #1e4620;
+        }
+        .arabic {
+            font-size: 1.5rem;
+            margin: 20px 0;
+            color: #1e4620;
+        }
+        .section-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3rem;
+            color: #d4af37;
+            margin: 15px 0;
+        }
+        .couple-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #1e4620;
+            margin-top: 15px;
+        }
+        .parents {
+            font-size: 0.9rem;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        .ampersand {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.5rem;
+            color: #d4af37;
+            margin: 10px 0;
+        }
+        .card {
+            background: #fafafa;
+            border: 1px solid #e2ece3;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+        .card h3 {
+            color: #1e4620;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #d4af37;
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+        /* Tombol */
+        .btn {
+            display: inline-block;
+            background-color: #d4af37;
+            color: #123016;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            margin-top: 15px;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
+        }
+        .btn:hover {
+            background-color: #1e4620;
+            color: #ffffff;
+        }
+        /* Tombol Audio Floating */
+        #audio-btn {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 50px;
+            height: 50px;
+            background: #d4af37;
+            color: #123016;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 999;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HALAMAN COVER AWAL -->
+    <div id="cover">
+        <p style="letter-spacing: 2px; text-transform: uppercase; font-size: 0.9rem;">Undangan Pernikahan</p>
+        <div class="cover-title">Fakih & Dwi</div>
+        <p style="margin-bottom: 30px; font-style: italic;">Kepada Yth. Bapak/Ibu/Saudara/i</p>
+        <button class="btn" onclick="bukaUndangan()">🔓 Buka Undangan</button>
+    </div>
+
+    <!-- KONTEN UTAMA -->
+    <div class="wrapper">
+        <p>Assalamu’alaikum Warahmatullahi Wabarakatuh</p>
+        <div class="arabic">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
+        <p style="font-size: 0.9rem; line-height: 1.6; color: #555; padding: 0 10px;">
+            "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang." <br><strong>(QS. Ar-Rum: 21)</strong>
+        </p>
+
+        <div class="section-title">Mempelai</div>
+        <p style="margin-bottom: 20px;">Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud mengundang Anda pada pernikahan kami:</p>
+
+        <!-- Profil Pria -->
+        <div class="couple-name">Muhammad Abdul Fakih (Fakih)</div>
+        <div class="parents">Putra dari Bapak Nur Syamsi Anugrah (Alm) & Ibu Rusmiati</div>
+
+        <div class="ampersand">&</div>
+
+        <!-- Profil Wanita -->
+        <div class="couple-name">Dwi Mekasari (Dwi)</div>
+        <div class="parents">Putri dari Bapak H. Rubiyanto & Ibu Hj. Sulastri</div>
+
+        <hr style="border: 0; border-top: 1px dashed #d4af37; margin: 40px 0;">
+
+        <div class="section-title">Acara Pernikahan</div>
+
+        <!-- Detail Akad -->
+        <div class="card">
+            <h3>Akad Nikah</h3>
+            <p style="margin-top: 8px;"><strong>Minggu, 13 September 2026</strong></p>
+            <p>⏰ 08.00 - 10.00 WIB</p>
+        </div>
+
+        <!-- Detail Resepsi -->
+        <div class="card">
+            <h3>Resepsi Pernikahan</h3>
+            <p style="margin-top: 8px;"><strong>Minggu, 13 September 2026</strong></p>
+            <p>⏰ 11.00 - 13.00 WIB</p>
+        </div>
+
+        <!-- Lokasi -->
+        <div class="card">
+            <h3>Lokasi Acara</h3>
+            <p style="margin: 10px 0; font-weight: bold;">Aula Komplek Pomad</p>
+            <p style="font-size: 0.9rem; color: #555; line-height: 1.5;">Jl. Kalibata Tengah Blok III No. 3, RT.3/RW.6, Kalibata, Kec. Pancoran, Kota Jakarta Selatan, DKI Jakarta 12740</p>
+            <a href="https://google.com" class="btn" target="_blank">🗺️ Lihat Google Maps</a>
+        </div>
+
+        <p style="margin-top: 40px; font-style: italic;">Wassalamu’alaikum Warahmatullahi Wabarakatuh</p>
+        <p style="margin-top: 10px; font-weight: bold; color: #1e4620;">Kami yang berbahagia, Fakih & Dwi</p>
+    </div>
+
+    <!-- AUDIO & KONTROL MUSIK -->
+    <!-- Menggunakan musik instrumen piano lembut sebagai contoh default -->
+    <audio id="mysong" loop>
+        <source src="https://soundhelix.com" type="audio/mpeg">
+    </audio>
+    <div id="audio-btn" onclick="toggleAudio()" style="display: none;">🎵</div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        var lagu = document.getElementById("mysong");
+        var tombolAudio = document.getElementById("audio-btn");
+
+        function bukaUndangan() {
+            // Sembunyikan cover dengan efek slide up
+            document.getElementById("cover").style.transform = "translateY(-100%)";
+            // Putar musik
+            lagu.play();
+            // Tampilkan tombol musik floating
+            tombolAudio.style.display = "flex";
+        }
+
+        function toggleAudio() {
+            if (lagu.paused) {
+                lagu.play();
+                tombolAudio.innerHTML = "🎵";
+            } else {
+                lagu.pause();
+                tombolAudio.innerHTML = "🔇";
+            }
+        }
+    </script>
+</body>
+</html>
